@@ -24,6 +24,14 @@
 #ifndef __GIST__MFCC__
 #define __GIST__MFCC__
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#ifdef LINUX
+#include <stdlib.h>
+#endif
+
 #define _USE_MATH_DEFINES
 #include <vector>
 #include <cmath>
