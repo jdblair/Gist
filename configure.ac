@@ -2,8 +2,9 @@ AC_INIT([gist], [1.0.4], [jdb@moship.net])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CC
 AC_PROG_CXX
-AC_PROG_RANLIB
 AM_PROG_AR
+LT_INIT
+AC_SUBST([LIBTOOL_DEPS])
 
 AC_SUBST([AM_CXXFLAGS], [-std=c++11])
 

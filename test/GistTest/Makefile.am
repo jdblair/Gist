@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = subdir-objects
 AM_CPPFLAGS = @FFT_CPPFLAGS@
 bin_PROGRAMS = GistTest
-GistTest_LDADD = -lboost_unit_test_framework $(top_builddir)/src/libGist.a @FFT_LDFLAGS@
+GistTest_LDADD = -lboost_unit_test_framework $(top_builddir)/src/libGist.la @FFT_LDFLAGS@
 GistTest_SOURCES = main.cpp \
 	Test_CoreFrequencyDomainFeatures.cpp \
 	Test_CoreTimeDomainFeatures.cpp \
