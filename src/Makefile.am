@@ -8,4 +8,6 @@ libGist_1_0_la_SOURCES = Gist.cpp \
 	fft/WindowFunctions.cpp \
 	mfcc/MFCC.cpp \
 	onset-detection-functions/OnsetDetectionFunction.cpp \
-	pitch/Yin.cpp
+	pitch/Yin.cpp \
+	gist_c.cpp
+include_HEADERS = Gist.h gist_c.h

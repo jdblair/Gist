@@ -1,1 +1,1 @@
-SUBDIRS = src libs/kiss_fft130 test/GistTest
+SUBDIRS = @SUBDIR_KISSFFT@ src test/GistTest

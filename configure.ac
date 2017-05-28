@@ -18,12 +18,14 @@ AC_ARG_ENABLE([fft],
 
 if test "x$enable_fft" = "xkissfft"; then
    AC_DEFINE_UNQUOTED([USE_KISS_FFT], [1], [Use kiss fft library])
-   FFT_LDFLAGS=\$\(top_builddir\)/libs/kiss_fft130/libKISSFFT.a
+   FFT_LDFLAGS=\$\(top_builddir\)/libs/kiss_fft130/libkisfft-1.3.la
    FFT_CPPFLAGS=-I\$\(top_srcdir\)/libs/kiss_fft130
+   SUBDIR_KISSFFT=libs/kiss_fft130
 fi
 if test "x$enable_fft" = "xfftw"; then
    AC_DEFINE_UNQUOTED([USE_FFTW], [1], [Use fftw library])
    FFT_LDFLAGS=-lfftw3
+   FFT_CPPFLAGS=-I.
 fi
 if test "x$enable_fft" = "xaccelerate"; then
    AC_DEFINE_UNQUOTED([USE_ACCELERATE_FFT], [1], [Use Accelerate fft library])
@@ -31,6 +33,7 @@ fi
 
 AC_SUBST(FFT_LDFLAGS)
 AC_SUBST(FFT_CPPFLAGS)
+AC_SUBST(SUBDIR_KISSFFT)
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
